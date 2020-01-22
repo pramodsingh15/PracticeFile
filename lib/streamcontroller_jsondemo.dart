@@ -72,7 +72,7 @@ class _StreamPhotoListState extends State<StreamPhotoList> {
 
   Widget _makeElement(int index) {
     if (index > list.length) {
-      return null;
+      return CircularProgressIndicator();
     } else {
       return Container(
         child: Card(
