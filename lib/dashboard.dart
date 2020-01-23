@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:swipedeletepullrefresh_demo/bloc_pattern_demo/counter_bloc.dart';
+import 'package:swipedeletepullrefresh_demo/bloc_pattern_demo/counter_demo.dart';
 import 'package:swipedeletepullrefresh_demo/dashboard_modal.dart';
 import 'package:swipedeletepullrefresh_demo/streambuilderdemo.dart';
 import 'package:swipedeletepullrefresh_demo/values/appstrings.dart';
@@ -51,7 +53,9 @@ class _DashboardState extends State<Dashboard> {
                     String title = choices[index].title;
                     if (title == AppStrings.LABEL_STREAM_BUILDER) {
                       this.widget.callBack.viewType(StreamBuilderDemo(), title);
-                    } 
+                    } else if (title == "CounterClass") {
+                      this.widget.callBack.viewType(CounterClass(), title);
+                    }
                   },
                 ),
               );
@@ -88,4 +92,8 @@ const List<DashBoardModal> choices = const <DashBoardModal>[
       title: "SwipeDeletePullRefresh",
       imageName: "images/logo.png",
       colorName: Colors.red),
+  const DashBoardModal(
+      title: "CounterClass",
+      imageName: "images/logo.png",
+      colorName: Colors.cyan),
 ];

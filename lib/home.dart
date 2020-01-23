@@ -45,6 +45,11 @@ class _HomeState extends State<Home> implements ViewTypeCallBack {
       setState(() {
         this.view = widget;
       });
+    } else if (title.contains("CounterClass")) {
+      appBarTitle = Text("CounterBloc");
+      setState(() {
+        this.view = widget;
+      });
     }
   }
 }
