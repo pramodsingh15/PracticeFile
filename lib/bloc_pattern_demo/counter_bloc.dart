@@ -7,12 +7,11 @@ class CounterBloc {
 
   final _counterStateController = StreamController<int>();
   StreamSink<int> get _intCounter => _counterStateController.sink;
-
 //for state, exposing only a stream which outputs data
   Stream<int> get counter => _counterStateController.stream;
 
-  final _counterEventController = StreamController<CounterEvent>();
 
+  final _counterEventController = StreamController<CounterEvent>();
 // For events, exposing only a sink which is an input
   Sink<CounterEvent> get counterEventSink => _counterEventController.sink;
 
