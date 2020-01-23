@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swipedeletepullrefresh_demo/bloc_pattern_demo/counter_bloc.dart';
 import 'package:swipedeletepullrefresh_demo/bloc_pattern_demo/counter_demo.dart';
+import 'package:swipedeletepullrefresh_demo/bloc_pattern_type2/counternew_demo..dart';
 import 'package:swipedeletepullrefresh_demo/dashboard_modal.dart';
 import 'package:swipedeletepullrefresh_demo/streambuilderdemo.dart';
 import 'package:swipedeletepullrefresh_demo/values/appstrings.dart';
@@ -55,7 +56,9 @@ class _DashboardState extends State<Dashboard> {
                       this.widget.callBack.viewType(StreamBuilderDemo(), title);
                     } else if (title == "CounterClass") {
                       this.widget.callBack.viewType(CounterClass(), title);
-                    }
+                    }  else if (title == "CounterBlocDemo") {
+                      this.widget.callBack.viewType(CounterDemoBloc(), title);
+                    } 
                   },
                 ),
               );
@@ -96,4 +99,8 @@ const List<DashBoardModal> choices = const <DashBoardModal>[
       title: "CounterClass",
       imageName: "images/logo.png",
       colorName: Colors.cyan),
+        const DashBoardModal(
+      title: "CounterBlocDemo",
+      imageName: "images/logo.png",
+      colorName: Colors.cyanAccent),
 ];
