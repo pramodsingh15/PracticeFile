@@ -55,6 +55,11 @@ class _HomeState extends State<Home> implements ViewTypeCallBack {
       setState(() {
         this.view = widget;
       });
+    } else if (title.contains("StreamFutureBuilder")) {
+      appBarTitle = Text("StreamFutureBuilder");
+      setState(() {
+        this.view = widget;
+      });
     }
   }
 }
