@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swipedeletepullrefresh_demo/dashboard.dart';
+import 'package:swipedeletepullrefresh_demo/movie_list/movie.dart';
 import 'package:swipedeletepullrefresh_demo/viewTypeCallback.dart';
 
 class Home extends StatefulWidget {
@@ -14,12 +15,14 @@ class _HomeState extends State<Home> implements ViewTypeCallBack {
   );
   Widget view;
   Dashboard dashboard;
+  Movie movie;
 
   @override
   void initState() {
     super.initState();
     dashboard = Dashboard(this);
     view = Dashboard(this);
+    movie = Movie(this);
   }
 
   @override
@@ -57,6 +60,16 @@ class _HomeState extends State<Home> implements ViewTypeCallBack {
       });
     } else if (title.contains("StreamFutureBuilder")) {
       appBarTitle = Text("StreamFutureBuilder");
+      setState(() {
+        this.view = widget;
+      });
+    } else if (title.contains("MovieList")) {
+      appBarTitle = Text("MovieList");
+      setState(() {
+        this.view = widget;
+      });
+    } else if (title.contains("movie_detailsPage")) {
+      appBarTitle = Text("Movie_DetailsPage");
       setState(() {
         this.view = widget;
       });
