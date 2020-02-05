@@ -3,7 +3,6 @@ import 'package:swipedeletepullrefresh_demo/bloc_pattern_demo/counter_bloc.dart'
 import 'package:swipedeletepullrefresh_demo/bloc_pattern_demo/counter_demo.dart';
 import 'package:swipedeletepullrefresh_demo/bloc_pattern_type2/counternew_demo..dart';
 import 'package:swipedeletepullrefresh_demo/dashboard_modal.dart';
-import 'package:swipedeletepullrefresh_demo/movie_list/movie.dart';
 import 'package:swipedeletepullrefresh_demo/streambuild_futureBuilder.dart';
 import 'package:swipedeletepullrefresh_demo/streambuilderdemo.dart';
 import 'package:swipedeletepullrefresh_demo/values/appstrings.dart';
@@ -58,19 +57,11 @@ class _DashboardState extends State<Dashboard> {
                       this.widget.callBack.viewType(StreamBuilderDemo(), title);
                     } else if (title == "CounterClass") {
                       this.widget.callBack.viewType(CounterClass(), title);
-                    } else if (title == "CounterBlocDemo") {
+                    }  else if (title == "CounterBlocDemo") {
                       this.widget.callBack.viewType(CounterDemoBloc(), title);
-                    } else if (title == "StreamFutureBuilder") {
-                      this
-                          .widget
-                          .callBack
-                          .viewType(StreamFutureBuilder(), title);
-                    } else if (title == "MovieList") {
-                      this
-                          .widget
-                          .callBack
-                          .viewType(Movie(this.widget.callBack), title);
-                    }
+                    }  else if (title == "StreamFutureBuilder") {
+                      this.widget.callBack.viewType(StreamFutureBuilder(), title);
+                    } 
                   },
                 ),
               );
@@ -112,16 +103,13 @@ const List<DashBoardModal> choices = const <DashBoardModal>[
       title: "CounterClass",
       imageName: "images/logo.png",
       colorName: Colors.cyan),
-  const DashBoardModal(
+        const DashBoardModal(
       title: "CounterBlocDemo",
       imageName: "images/logo.png",
       colorName: Colors.cyanAccent),
-  const DashBoardModal(
+
+      const DashBoardModal(
       title: "StreamFutureBuilder",
       imageName: "images/logo.png",
       colorName: Colors.green),
-  const DashBoardModal(
-      title: "MovieList",
-      imageName: "images/logo.png",
-      colorName: Colors.greenAccent),
 ];
