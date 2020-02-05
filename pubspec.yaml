@@ -24,6 +24,8 @@ dependencies:
   flutter_bloc: ^3.1.0
   flutter_rating_bar: ^3.0.1+1
   carousel_slider: ^1.4.1
+  rxdart: 
+
 
 
   # The following adds the Cupertino Icons font to your application.

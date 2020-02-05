@@ -73,6 +73,11 @@ class _HomeState extends State<Home> implements ViewTypeCallBack {
       setState(() {
         this.view = widget;
       });
+    } else if (title.contains("LoginBloc")) {
+      appBarTitle = Text("Login Bloc");
+      setState(() {
+        this.view = widget;
+      });
     }
   }
 }
