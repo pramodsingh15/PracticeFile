@@ -239,7 +239,7 @@ class _SwipeClassState extends State<SwipeClass> {
             ),
           );
         });
-    future.then((value) => _closeModal(value));
+    future.then((value) => _closeModal(value)); // return callback
   }
 
   void _closeModal(void value) {
