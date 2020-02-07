@@ -59,10 +59,10 @@ class _LoginMainState extends State<LoginMain> {
                 stream: bloc.submitCheck,
                 builder: (context, snapshot) {
                   return FlatButton(
-                    color: Colors.grey[300],
+                    color: Colors.cyanAccent,
                     onPressed:
                         snapshot.hasData ? () => changedThePage(context) : null,
-                    child: Text("Submit"),
+                    child: Text("Submit",),
                   );
                 })
           ],
