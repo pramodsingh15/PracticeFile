@@ -66,7 +66,8 @@ class _DashboardState extends State<Dashboard> {
                           .callBack
                           .viewType(StreamFutureBuilder(), title);
                     } else if (title == "LoginBloc") {
-                      this.widget.callBack.viewType(LoginMain(), "LoginBloc");
+                      this.widget.callBack.viewType(
+                          LoginMain(this.widget.callBack), "LoginBloc");
                     }
                   },
                 ),

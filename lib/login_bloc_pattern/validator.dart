@@ -1,7 +1,5 @@
 import 'dart:async';
 
-import 'dart:math';
-
 mixin Validators {
   var emailValidators =
       StreamTransformer<String, String>.fromHandlers(handleData: (email, sink) {
@@ -17,7 +15,7 @@ mixin Validators {
     if (password.length > 4) {
       sink.add(password);
     } else {
-      sink.add("Password length should be more than 4 charachters");
+      sink.addError("Password length should be more than 4 charachters");
     }
   });
 }

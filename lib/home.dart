@@ -78,6 +78,11 @@ class _HomeState extends State<Home> implements ViewTypeCallBack {
       setState(() {
         this.view = widget;
       });
+    } else if (title.contains("PageTwo")) {
+      appBarTitle = Text("Page Two");
+      setState(() {
+        this.view = widget;
+      });
     }
   }
 }
