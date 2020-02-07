@@ -62,7 +62,9 @@ class _LoginMainState extends State<LoginMain> {
                     color: Colors.cyanAccent,
                     onPressed:
                         snapshot.hasData ? () => changedThePage(context) : null,
-                    child: Text("Submit",),
+                    child: Text(
+                      "Submit",
+                    ),
                   );
                 })
           ],

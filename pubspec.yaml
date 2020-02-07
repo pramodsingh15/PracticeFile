@@ -25,6 +25,7 @@ dependencies:
   flutter_rating_bar: ^3.0.1+1
   carousel_slider: ^1.4.1
   rxdart: 
+  device_info: ^0.4.1+4
 
 
 

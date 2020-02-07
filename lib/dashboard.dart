@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:swipedeletepullrefresh_demo/app_lifecycle.dart/applifecycle.dart';
+import 'package:swipedeletepullrefresh_demo/app_lifecycle.dart/stateful_lifecycle.dart';
 import 'package:swipedeletepullrefresh_demo/bloc_pattern_demo/counter_bloc.dart';
 import 'package:swipedeletepullrefresh_demo/bloc_pattern_demo/counter_demo.dart';
 import 'package:swipedeletepullrefresh_demo/bloc_pattern_type2/counternew_demo..dart';
@@ -68,7 +70,13 @@ class _DashboardState extends State<Dashboard> {
                     } else if (title == "LoginBloc") {
                       this.widget.callBack.viewType(
                           LoginMain(this.widget.callBack), "LoginBloc");
+                    } else if (title == "AppLifeCycle") {
+                      this
+                          .widget
+                          .callBack
+                          .viewType(AppLifeCycleClass(this.widget.callBack), "AppLifeCycle");
                     }
+                   
                   },
                 ),
               );
@@ -120,5 +128,9 @@ const List<DashBoardModal> choices = const <DashBoardModal>[
   const DashBoardModal(
       title: "LoginBloc",
       imageName: "images/logo.png",
-      colorName: Colors.greenAccent)
+      colorName: Colors.greenAccent),
+  const DashBoardModal(
+      title: "AppLifeCycle",
+      imageName: "images/logo.png",
+      colorName: Colors.cyan)
 ];
