@@ -88,6 +88,11 @@ class _HomeState extends State<Home> implements ViewTypeCallBack {
       setState(() {
         this.view = widget;
       });
+    } else if (title.contains("StreambuilderCounter")) {
+      appBarTitle = Text("StreamBuilder Counter");
+      setState(() {
+        this.view = widget;
+      });
     }
   }
 }

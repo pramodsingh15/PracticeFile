@@ -7,6 +7,7 @@ import 'package:swipedeletepullrefresh_demo/bloc_pattern_type2/counternew_demo..
 import 'package:swipedeletepullrefresh_demo/dashboard_modal.dart';
 import 'package:swipedeletepullrefresh_demo/login_bloc_pattern/login_main.dart';
 import 'package:swipedeletepullrefresh_demo/streambuild_futureBuilder.dart';
+import 'package:swipedeletepullrefresh_demo/streambuilder_counterdemo.dart';
 import 'package:swipedeletepullrefresh_demo/streambuilderdemo.dart';
 import 'package:swipedeletepullrefresh_demo/values/appstrings.dart';
 import 'package:swipedeletepullrefresh_demo/viewTypeCallback.dart';
@@ -71,12 +72,14 @@ class _DashboardState extends State<Dashboard> {
                       this.widget.callBack.viewType(
                           LoginMain(this.widget.callBack), "LoginBloc");
                     } else if (title == "AppLifeCycle") {
-                      this
-                          .widget
-                          .callBack
-                          .viewType(AppLifeCycleClass(this.widget.callBack), "AppLifeCycle");
+                      this.widget.callBack.viewType(
+                          AppLifeCycleClass(this.widget.callBack),
+                          "AppLifeCycle");
+                    } else if (title == "StreambuilderCounter") {
+                      this.widget.callBack.viewType(
+                          StreamBuilderCounter(),
+                          "StreambuilderCounter");
                     }
-                   
                   },
                 ),
               );
